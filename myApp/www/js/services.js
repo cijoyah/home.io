@@ -48,3 +48,20 @@ angular.module('starter.services', [])
     }
   };
 });
+  .factory('Chats', function(FURL, $firebaseArray) {
+    var ref = new Firebase(FURL);
+    var adverts = $firebaseArray(ref.child('adverts'));
+
+    var Adverts = {
+      saveAdvert: function(advert, image) {
+        var newAdvert = {
+          name: advert.name,
+          title: advert.title,
+          description: advert.description,
+          price: advert.price,
+          image: image
+        }
+      }
+    }
+    return Products;
+  });

@@ -15,6 +15,12 @@ angular.module('starter.controllers', [])
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
+
+  $scope.image = "http://blog.spareroom.co.uk/wp-content/uploads/2012/10/SpareRoom-yurt.png";
+
+  $scope.button = function(advert) {
+    console.log("submit button clicked", advert, $scope.image);
+  }
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
